@@ -21,11 +21,11 @@ public class HelloController {
     }
 
     @GetMapping("hello-string")
-    @ResponseBody //http의 body부분에 아래 내용을 직접 넣어주겠다는 의미
+    @ResponseBody //http의 body부분에 데이터를 직접 넣어주겠다는 의미
     public String helloString(@RequestParam("name") String name){
         return "hello " + name; //return값이 요청한 클라이언트에 그대로 내려감
     }
-    // 템플릿엔진과의 차이점은 템플릿엔진은 템플릿엔진은 view라는 템플릿이 있는 상태에서 조작하는 방식이고,
+    // 템플릿엔진과의 차이점은 템플릿엔진은 view라는 템플릿이 있는 상태에서 조작하는 방식이고,
     // 위의 작성한 방식은 view 등이 없이 문자가 그대로 내려간다는 점이다.
     // ->웹에서 소스를 확인하면 html태그가 없음
 
