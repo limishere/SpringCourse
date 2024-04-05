@@ -3,10 +3,14 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional //jpa를 쓰려면 항상 트랜잭션이 있어야함(데이터를 저장,변경할때 필요)->회원가입
 public class MemberService {
 
     //회원서비스를 만드려면 우선 회원리포지토리가 필요
